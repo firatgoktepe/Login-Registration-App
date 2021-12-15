@@ -13,7 +13,7 @@ export default StyleSheet.create({
 
     logo: {
         flex: 1, 
-        width: '90%',
+        width: 90,
         height: 120,
         alignSelf: 'center',
         margin: 30
@@ -37,6 +37,7 @@ export default StyleSheet.create({
         marginTop: 10,
         marginBottom: 10,
         marginLeft: 30,
+        height: 60,
         marginRight: 30,
         borderRadius: 5,
         alignItems: 'center',
@@ -47,7 +48,8 @@ export default StyleSheet.create({
     buttonTitle: {
         flex: 1,
         alignItems: 'center',
-        marginTop: 20,
+        marginTop: 15,
+        fontSize: 20
     },
 
     footerView: {
@@ -57,13 +59,15 @@ export default StyleSheet.create({
     },
 
     footerText: {
-        fontSize: 16,
+        fontSize: 20,
         color: '#2e2e2d',
+        textAlign: 'center',
+        marginTop: 20,
 
     },
 
     footerLink: {
-        fontSize: 16,
+        fontSize: 20,
         color: '#ff5a60',
         fontWeight: 'bold',
     },
