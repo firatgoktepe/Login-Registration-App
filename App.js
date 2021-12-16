@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
 import React, { useEffect, useState } from 'react'
+import { Text, TouchableOpacity } from 'react-native'
 import { firebase } from './src/firebase/config'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
@@ -46,9 +47,23 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         { user ? (
-          <Stack.Screen name="Home">
-            {props => <HomeScreen {...props} extraData={user} />}
-          </Stack.Screen>
+          <>
+            <Stack.Screen name="Home" options={{
+              headerRight: () => (
+                <TouchableOpacity onPress={() => {
+                  firebase.auth().signOut()
+                  .then(setUser(null))
+                  .catch((error) => {
+                    alert(error)
+                  });
+                }}>
+                  <Text style={{marginRight: 15}}>Logout</Text>
+                </TouchableOpacity>
+              ),
+            }}>
+              {props => <HomeScreen {...props} extraData={user} />}
+            </Stack.Screen>
+          </>
         ) : (
           <>
             <Stack.Screen name="Login" component={LoginScreen} />
