@@ -51,15 +51,38 @@ export default function HomeScreen(props) {
         }
     }
 
+   
+
+
     const renderEntity = ({item, index}) => {
         return (
-            <View style={styles.entityContainer}>
+
+             <View style={styles.entityContainer}>
                 <Text style={styles.entityText}>
                     {index}. {item.text}
-                </Text>
+                </Text>      
             </View>
+           
         )
     }
+
+    const onDeleteAll = () => {
+        entityRef
+            .where("authorID", "==", userID)
+            .get()
+            .then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    doc.ref.delete()
+                
+                });
+                setEntities([])
+            })
+            .catch((error) => {
+                alert(error)
+            });
+    }
+
+
 
     return (
         <View style={styles.container}>
@@ -78,15 +101,25 @@ export default function HomeScreen(props) {
                     <Text style={styles.buttonText}>Add</Text>
                 </TouchableOpacity>
             </View>
-            { entities && (
-                <View style={styles.listContainer}>
-                    <FlatList
-                        data={entities}
-                        renderItem={renderEntity}
-                        keyExtractor={(item) => item.id}
-                        removeClippedSubviews={true}
-                    />
-                </View>
+            { entities && entities.length > 0 && (
+
+                    <View style={styles.listContainer}>
+                        <FlatList
+                            data={entities}
+                            renderItem={renderEntity}
+                            keyExtractor={(item) => item.id}
+                            removeClippedSubviews={true}
+                            
+                        />
+                        
+                        <View>
+                            <TouchableOpacity style={styles.deleteButton} onPress={ onDeleteAll }>
+                                <Text style={styles.deleteText}>Delete All</Text>
+                            </TouchableOpacity>
+                        </View>
+                        
+                    </View>
+                        
             )}
         </View>
     )

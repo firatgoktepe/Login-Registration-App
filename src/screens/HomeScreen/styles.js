@@ -22,7 +22,7 @@ export default StyleSheet.create({
         height: 48,
         borderRadius: 5,
         overflow: 'hidden',
-        backgroundColor: 'white',
+        backgroundColor: '#ffffff',
         paddingLeft: 16,
         flex: 1,
         marginRight: 5
@@ -35,8 +35,20 @@ export default StyleSheet.create({
         alignItems: "center",
         justifyContent: 'center'
     },
+    deleteButton : {
+        height: 47,
+        borderRadius: 5,
+        backgroundColor: '#ff0101',
+        width: 80,
+        alignItems: "center",
+        justifyContent: 'center'
+    },
     buttonText: {
-        color: 'white',
+        color: '#ffffff',
+        fontSize: 16
+    },
+    deleteText: {
+        color: '#ffffff',
         fontSize: 16
     },
     listContainer: {
