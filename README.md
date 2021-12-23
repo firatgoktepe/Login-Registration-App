@@ -4,7 +4,7 @@ a Login/Registration React Native app that is integrated with a Firebase backend
 
 This is a React Native Firebase Starter Project with login, registration, persisted login, database reads and writes. This project is as a boilerplate for bootstrapping any new React Native app that uses Firebase as its backend.
 
-### Screenshots
+## Screenshots
 
   <img src="https://user-images.githubusercontent.com/47864126/146556693-f5cb7379-e1a2-4d90-a542-831e54e19251.jpg" width=50% height=50%/>
 
