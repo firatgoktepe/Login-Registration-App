@@ -47,10 +47,6 @@ export default StyleSheet.create({
         color: '#ffffff',
         fontSize: 16
     },
-    deleteText: {
-        color: '#ffffff',
-        fontSize: 16
-    },
     listContainer: {
         marginTop: 20,
         padding: 20,

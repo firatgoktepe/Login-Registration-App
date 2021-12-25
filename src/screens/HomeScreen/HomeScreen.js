@@ -102,7 +102,7 @@ export default function HomeScreen(props) {
                 </TouchableOpacity>
             </View>
             { entities && entities.length > 0 && (
-
+                <>
                     <View style={styles.listContainer}>
                         <FlatList
                             data={entities}
@@ -112,13 +112,12 @@ export default function HomeScreen(props) {
                             
                         />
                         
-                        <View>
-                            <TouchableOpacity style={styles.deleteButton} onPress={ onDeleteAll }>
-                                <Text style={styles.deleteText}>Delete All</Text>
-                            </TouchableOpacity>
-                        </View>
+                        <TouchableOpacity style={styles.deleteButton} onPress={ onDeleteAll }>
+                            <Text style={styles.buttonText}>Delete All</Text>
+                        </TouchableOpacity>
                         
-                    </View>
+                    </View>   
+                 </>   
                         
             )}
         </View>
