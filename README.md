@@ -12,7 +12,7 @@ This is a React Native Firebase Starter Project with login, registration, persis
 
   <img src="https://user-images.githubusercontent.com/47864126/146556660-83ee19ba-333c-454f-aa61-32e7173934eb.jpg" width=50% height=50%/>
 
-  <img src="https://user-images.githubusercontent.com/47864126/146556670-d8596e75-cf4b-4f65-8f7f-5e5868468375.jpg" width=50% height=50%/>
+  <img width=50% height=50% alt="Screenshot 2021-12-25 at 17 27 58" src="https://user-images.githubusercontent.com/47864126/147387219-da054ee8-14db-4976-8e5c-79598a66822f.png">
 
 This React Native Firebase starter contains a few key features that all apps backed by Fireabase support:
 
